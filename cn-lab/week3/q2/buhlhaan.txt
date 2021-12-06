@@ -1,0 +1,35 @@
+regex - (ip address or name)
+if(ip) - search files folder
+else{
+    ask root - 
+        input(google.com),
+
+        if(com)
+            return [com-server-address]-[port]
+
+            ask [com-server-address]-[port] -
+                input(google.com)
+
+                if(found)
+                    return [ip-address]
+
+                    printfromfile(ipaddress)
+                else
+                    return page not found!
+
+
+        else if(edu)
+            return [edu-server-address]-[port]
+
+            ask [com-server-address]-[port] -
+                input(google.com)
+
+                if(found)
+                    return [ip-address]
+
+                    printfromfile(ipaddress)
+                else
+                    return page not found!
+        else
+            return page not found!     
+} 
